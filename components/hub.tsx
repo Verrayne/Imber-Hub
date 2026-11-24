@@ -11,12 +11,11 @@ export function Header() {
 
 export function Hero() {
   return <section className="hero container" aria-labelledby="hero-title">
-    <div className="hero-copy"><p className="eyebrow"><span className="light-point"/>Etienne Fourie</p>
-      <h1 id="hero-title">I build useful things for <span>complicated</span> problems.</h1>
-      <p className="hero-description">Economics, technology, software and the occasional idea that turns into a project. This is where I keep the things I build, explore and work on.</p>
+    <div className="hero-copy">
+      <h1 id="hero-title">Trying to solve problems</h1>
+      <p className="hero-description">This is where I keep the things I build, explore and ideate on.</p>
       <div className="hero-actions"><a className="button button-primary" href="#projects">Explore projects <ArrowDown size={16} aria-hidden="true"/></a><a className="text-link" href="#about">About me <ArrowRight size={16} aria-hidden="true"/></a></div>
     </div><OrbitalVisual/>
-    <div className="hero-footnote"><span>A personal corner of the internet</span><span className="footnote-line"/><span>Always a work in progress</span></div>
   </section>;
 }
 
@@ -30,17 +29,17 @@ export function ProjectCard({ project }: { project: Project }) {
 
 export function ProjectSection() {
   return <section className="projects-section container section" id="projects" aria-labelledby="projects-title">
-    <div className="section-intro"><div><p className="eyebrow">Personal projects</p><h2 id="projects-title">Things I’m building<span className="accent-dot">.</span></h2></div><p className="section-description">Some are useful. Some are experiments. Usually they start because I wanted something that didn’t quite exist yet.</p></div>
+    <div className="section-intro"><h2 id="projects-title">Personal Projects</h2></div>
     <div className="project-grid">{projects.map(project => <ProjectCard key={project.name} project={project}/>)}</div>
   </section>;
 }
 
 export function WorkSection() {
-  return <section className="work-section container" aria-labelledby="work-title"><div className="work-panel"><div className="work-icon"><BriefcaseBusiness size={24} strokeWidth={1.3} aria-hidden="true"/></div><div className="work-copy"><p className="eyebrow">Work</p><h2 id="work-title">Work projects live somewhere else.</h2><p>I keep professional projects, internal tools and work-related builds separate from my personal projects.</p></div><a className="button button-outline" href={workUrl}>Visit work.imber.me <ArrowUpRight size={16} aria-hidden="true"/></a></div></section>;
+  return <section className="work-section container" aria-labelledby="work-title"><div className="work-panel"><div className="work-icon"><BriefcaseBusiness size={24} strokeWidth={1.3} aria-hidden="true"/></div><div className="work-copy"><h2 id="work-title">Work projects live somewhere else.</h2><p>I keep professional projects, internal tools and work-related builds separate from my personal projects.</p></div><a className="button button-outline" href={workUrl}>Visit work.imber.me <ArrowUpRight size={16} aria-hidden="true"/></a></div></section>;
 }
 
 export function AboutSection() {
-  return <section className="about-section container section" id="about" aria-labelledby="about-title"><div><p className="eyebrow">About</p><h2 id="about-title">Curious about systems, technology and how things work.</h2></div><div className="about-copy"><p>My background is in Economics, but my interests have always extended well beyond one discipline. I like understanding systems, finding friction and building practical ways to improve them.</p><p>That usually leads me somewhere between economics, technology, software, data, finance and whatever problem has caught my attention at the time.</p><span className="about-signature">Etienne Fourie<span className="signature-line"/></span></div></section>;
+  return <section className="about-section container section" id="about" aria-labelledby="about-title"><div><p className="eyebrow">About</p><h2 id="about-title">Curious about systems, technology and how things work.</h2></div><div className="about-copy"><p>Graduate of Economics with a passion for technology, nature, gardening, golf, automation and making life simpler and easier while tracking every possible metric I can.</p><p>One thing I’ve learnt over the last 40 years is that data is king, you never know when something might be useful. Better store everything.</p><span className="about-signature">Etienne Fourie<span className="signature-line"/></span></div></section>;
 }
 
 export function Footer() {
