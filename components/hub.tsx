@@ -22,9 +22,9 @@ export function Hero() {
 
 export function ProjectCard({ project }: { project: Project }) {
   return <a className={`project-card ${project.theme}`} href={project.href}>
-    <div className="card-topline"><span className="eyebrow">{project.category}</span><span className="project-number">/{project.number}</span></div>
+    <div className="card-topline"><span className="eyebrow">{project.category}</span></div>
     <ProjectVisual theme={project.theme}/>
-    <div className="card-content"><h3>{project.name}</h3><p>{project.description}</p><span className="card-link">Explore {project.name}<ArrowUpRight size={18} aria-hidden="true"/></span></div>
+    <div className="card-content"><h3>{project.name}</h3><p>{project.description}</p></div>
   </a>;
 }
 
